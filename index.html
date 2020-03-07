@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sito</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
+    <script>
+        function add() {
+            if(document.getElementById("input").value != ""){
+                var ul = document.getElementById("lista");
+                var candidate = document.getElementById("input");
+                var li = document.createElement("li");
+                li.setAttribute("id", candidate.value);
+                li.appendChild(document.createTextNode(candidate.value));
+                ul.appendChild(li);
+            }
+        }
+    </script>
 </head>
 
 <body>
